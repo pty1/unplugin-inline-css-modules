@@ -1,7 +1,7 @@
 {
   "name": "unplugin-inline-css-modules",
-  "version": "0.1.0",
-  "description": "Write CSS modules without leaving your javascript!",
+  "version": "0.1.1",
+  "description": "Zero-runtime scoped CSS for any JS framework — write CSS modules inline as tagged templates",
   "author": "pty1",
   "license": "MIT",
   "repository": {
