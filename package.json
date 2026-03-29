@@ -1,0 +1,195 @@
+{
+  "name": "unplugin-inline-css-modules",
+  "version": "0.1.0",
+  "description": "Write CSS modules without leaving your javascript!",
+  "author": "pty1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bluskript/unplugin-inline-css-modules.git"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.mjs"
+      }
+    },
+    "./vite": {
+      "require": {
+        "types": "./dist/vite.d.ts",
+        "default": "./dist/vite.js"
+      },
+      "import": {
+        "types": "./dist/vite.d.ts",
+        "default": "./dist/vite.mjs"
+      }
+    },
+    "./rollup": {
+      "require": {
+        "types": "./dist/rollup.d.ts",
+        "default": "./dist/rollup.js"
+      },
+      "import": {
+        "types": "./dist/rollup.d.ts",
+        "default": "./dist/rollup.mjs"
+      }
+    },
+    "./rolldown": {
+      "require": {
+        "types": "./dist/rolldown.d.ts",
+        "default": "./dist/rolldown.js"
+      },
+      "import": {
+        "types": "./dist/rolldown.d.ts",
+        "default": "./dist/rolldown.mjs"
+      }
+    },
+    "./webpack": {
+      "require": {
+        "types": "./dist/webpack.d.ts",
+        "default": "./dist/webpack.js"
+      },
+      "import": {
+        "types": "./dist/webpack.d.ts",
+        "default": "./dist/webpack.mjs"
+      }
+    },
+    "./rspack": {
+      "require": {
+        "types": "./dist/rspack.d.ts",
+        "default": "./dist/rspack.js"
+      },
+      "import": {
+        "types": "./dist/rspack.d.ts",
+        "default": "./dist/rspack.mjs"
+      }
+    },
+    "./esbuild": {
+      "require": {
+        "types": "./dist/esbuild.d.ts",
+        "default": "./dist/esbuild.js"
+      },
+      "import": {
+        "types": "./dist/esbuild.d.ts",
+        "default": "./dist/esbuild.mjs"
+      }
+    },
+    "./farm": {
+      "require": {
+        "types": "./dist/farm.d.ts",
+        "default": "./dist/farm.js"
+      },
+      "import": {
+        "types": "./dist/farm.d.ts",
+        "default": "./dist/farm.mjs"
+      }
+    },
+    "./bun": {
+      "require": {
+        "types": "./dist/bun.d.ts",
+        "default": "./dist/bun.js"
+      },
+      "import": {
+        "types": "./dist/bun.d.ts",
+        "default": "./dist/bun.mjs"
+      }
+    },
+    "./nuxt": {
+      "require": {
+        "types": "./dist/nuxt.d.ts",
+        "default": "./dist/nuxt.js"
+      },
+      "import": {
+        "types": "./dist/nuxt.d.ts",
+        "default": "./dist/nuxt.mjs"
+      }
+    },
+    "./astro": {
+      "require": {
+        "types": "./dist/astro.d.ts",
+        "default": "./dist/astro.js"
+      },
+      "import": {
+        "types": "./dist/astro.d.ts",
+        "default": "./dist/astro.mjs"
+      }
+    },
+    "./next": {
+      "require": {
+        "types": "./dist/next.d.ts",
+        "default": "./dist/next.js"
+      },
+      "import": {
+        "types": "./dist/next.d.ts",
+        "default": "./dist/next.mjs"
+      }
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "dev": "bun run build -- --watch",
+    "build": "tsup && cp ./src/loader.cjs dist",
+    "build:prod": "cross-env NODE_ENV=production bun run build",
+    "test": "vitest run",
+    "test:e2e": "playwright test"
+  },
+  "dependencies": {
+    "astro": "^6.1.1",
+    "farm": "link:farm",
+    "nextjs": "link:nextjs",
+    "nuxt_4": "link:nuxt_4",
+    "rsbuild": "link:rsbuild",
+    "solid-start": "link:solid-start",
+    "sveltekit": "link:sveltekit",
+    "unplugin": "^3.0.0",
+    "vite-react": "link:vite-react",
+    "vite-solid": "link:vite-solid",
+    "vite-vue": "link:vite-vue"
+  },
+  "peerDependencies": {
+    "next": "^16.2.1",
+    "vite": ">=2.0.0-0"
+  },
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    },
+    "next": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@alloc/prettier-config": "^1.0.0",
+    "@playwright/test": "^1.58.2",
+    "@types/node": "^25.5.0",
+    "cross-env": "^10.1.0",
+    "prettier": "^3.8.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "vite": "^8.0.3",
+    "vitest": "^4.1.2"
+  },
+  "prettier": "@alloc/prettier-config",
+  "keywords": [
+    "unplugin",
+    "vite",
+    "rollup",
+    "webpack",
+    "rspack",
+    "esbuild",
+    "rolldown",
+    "farm",
+    "bun",
+    "css-modules",
+    "inline-css",
+    "css-in-js"
+  ]
+}
