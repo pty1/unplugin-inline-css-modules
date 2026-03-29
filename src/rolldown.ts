@@ -1,6 +1,5 @@
 import { createRolldownPlugin } from 'unplugin'
-import { unpluginFactory } from './index'
+import { unpluginFactory } from './plugin'
 
 export default createRolldownPlugin(unpluginFactory)
 export { css } from './index'
-export type { PluginConfig } from './index'

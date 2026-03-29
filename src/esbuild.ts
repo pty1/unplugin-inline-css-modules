@@ -1,7 +1,6 @@
 import { createEsbuildPlugin } from 'unplugin'
-import { unpluginFactory } from './index'
+import { unpluginFactory } from './plugin'
 
 export default createEsbuildPlugin(unpluginFactory)
 
 export { css } from './index'
-export type { PluginConfig } from './index'

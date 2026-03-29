@@ -1,6 +1,5 @@
 import { createVitePlugin } from 'unplugin'
-import { unpluginFactory } from './index'
+import { unpluginFactory } from './plugin'
 
 export default createVitePlugin(unpluginFactory)
 export { css } from './index'
-export type { PluginConfig } from './index'

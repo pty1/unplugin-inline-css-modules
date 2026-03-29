@@ -1,5 +1,4 @@
-import type { PluginConfig } from './index'
-import unplugin from './index'
+import unplugin, { PluginConfig } from './plugin'
 import type { AstroIntegration } from 'astro'
 
 export default function (options: PluginConfig = {}) {
@@ -24,4 +23,3 @@ export default function (options: PluginConfig = {}) {
 }
 
 export { css } from './index'
-export type { PluginConfig } from './index'

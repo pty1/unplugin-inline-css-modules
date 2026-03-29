@@ -9,6 +9,7 @@ export const tsup: Options = {
   dts: true,
   entry: {
     index: resolve(__dirname, 'src/index.ts'),
+    plugin: resolve(__dirname, 'src/plugin.ts'),
     vite: resolve(__dirname, 'src/vite.ts'),
     rollup: resolve(__dirname, 'src/rollup.ts'),
     rolldown: resolve(__dirname, 'src/rolldown.ts'),

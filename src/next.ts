@@ -1,5 +1,5 @@
 import { createWebpackPlugin } from 'unplugin'
-import { PluginConfig, unpluginFactory } from './index'
+import { PluginConfig, unpluginFactory } from './plugin'
 
 export default function (options: PluginConfig = {}) {
   return createWebpackPlugin(unpluginFactory)({
@@ -9,4 +9,3 @@ export default function (options: PluginConfig = {}) {
 }
 
 export { css } from './index'
-export type { PluginConfig } from './index'

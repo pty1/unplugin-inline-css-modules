@@ -1,6 +1,5 @@
 import { createFarmPlugin } from 'unplugin'
-import { unpluginFactory } from './index'
+import { unpluginFactory } from './plugin'
 
 export default createFarmPlugin(unpluginFactory) as any
 export { css } from './index'
-export type { PluginConfig } from './index'
