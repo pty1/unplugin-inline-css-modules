@@ -1,6 +1,6 @@
 {
   "name": "unplugin-inline-css-modules",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Zero-runtime scoped CSS for any JS framework — write CSS modules inline as tagged templates",
   "author": "pty1",
   "license": "MIT",
@@ -136,14 +136,14 @@
   "files": ["dist"],
   "scripts": {
     "dev": "bun run build -- --watch",
-    "build": "tsup && cp ./src/loader.cjs dist",
+    "build": "tsup",
     "build:prod": "cross-env NODE_ENV=production bun run build",
     "test": "vitest run",
     "test:e2e": "playwright test"
   },
   "dependencies": {
-    "astro": "^6.1.1",
     "farm": "link:farm",
+    "magic-string": "^0.30.21",
     "nextjs": "link:nextjs",
     "nuxt_4": "link:nuxt_4",
     "rsbuild": "link:rsbuild",
@@ -170,6 +170,7 @@
     "@alloc/prettier-config": "^1.0.0",
     "@playwright/test": "^1.58.2",
     "@types/node": "^25.5.0",
+    "astro": "^6.1.1",
     "cross-env": "^10.1.0",
     "prettier": "^3.8.1",
     "tsup": "^8.5.1",
